@@ -100,6 +100,7 @@ void board(char arr[3][3]){
 }
 
 //checks the winner
+//something is wrong with the conditionals as it only checks in this specific order
 int checkWin(char arr[3][3]){
 
     if(arr[0][0] != ' ' && arr[0][0] == arr[0][1] && arr[0][1] == arr[0][2]){         //First Row X
