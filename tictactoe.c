@@ -100,24 +100,23 @@ void board(char arr[3][3]){
 }
 
 //checks the winner
-//something is wrong with the conditionals as it only checks in this specific order
 int checkWin(char arr[3][3]){
 
-    if(arr[0][0] != ' ' && arr[0][0] == arr[0][1] && arr[0][1] == arr[0][2]){         //First Row X
+    if((arr[0][0] != ' ' || arr[0][1] != ' ' || arr[0][2] != ' ') && arr[0][0] == arr[0][1] && arr[0][1] == arr[0][2]){         //First Row X
         return 1;
-    }else if(arr[1][0] != ' ' && arr[1][0] == arr[1][1] && arr[1][1] == arr[1][2]){   //Second Row X
+    }else if((arr[1][0] != ' ' || arr[1][1] != ' ' || arr[1][2] != ' ') && arr[1][0] == arr[1][1] && arr[1][1] == arr[1][2]){   //Second Row X
         return 1;
-    }else if(arr[2][0] != ' ' && arr[2][0] == arr[2][1] && arr[2][1] == arr[2][2]){   //Third Row X
+    }else if((arr[2][0] != ' ' || arr[2][1] != ' ' || arr[2][2] != ' ') && arr[2][0] == arr[2][1] && arr[2][1] == arr[2][2]){   //Third Row X
         return 1;
-    }else if(arr[0][0] != ' ' && arr[0][0] == arr[1][0] && arr[1][0] == arr[2][0]){   //First Column X
+    }else if((arr[0][0] != ' ' || arr[1][0] != ' ' || arr[2][0] != ' ') && arr[0][0] == arr[1][0] && arr[1][0] == arr[2][0]){   //First Column X
         return 1;
-    }else if(arr[0][1] != ' ' && arr[0][1] == arr[1][1] && arr[1][1] == arr[2][1]){   //Second Column X
+    }else if((arr[0][1] != ' ' || arr[1][1] != ' ' || arr[2][1] != ' ') && arr[0][1] == arr[1][1] && arr[1][1] == arr[2][1]){   //Second Column X
         return 1;
-    }else if(arr[0][2] != ' ' && arr[0][2] == arr[1][2] && arr[1][2] == arr[2][2]){   //Third Column X
+    }else if((arr[0][2] != ' ' || arr[1][2] != ' ' || arr[2][2] != ' ') && arr[0][2] == arr[1][2] && arr[1][2] == arr[2][2]){   //Third Column X
         return 1;
-    }else if(arr[0][0] != ' ' && arr[0][0] == arr[1][1] && arr[1][1] == arr[2][2]){   //Diagonal L-R X
+    }else if((arr[0][0] != ' ' || arr[1][1] != ' ' || arr[2][2] != ' ') && arr[0][0] == arr[1][1] && arr[1][1] == arr[2][2]){   //Diagonal L-R X
         return 1;
-    }else if(arr[0][2] != ' ' && arr[0][2] == arr[1][1] && arr[1][1] == arr[2][0]){   //Diagonal R-L X
+    }else if((arr[0][2] != ' ' || arr[1][1] != ' ' || arr[2][0] != ' ') && arr[0][2] == arr[1][1] && arr[1][1] == arr[2][0]){   //Diagonal R-L X
         return 1;
     }else{
         return 0;
